@@ -7,9 +7,9 @@ require './controllers/OrderController'
 
 require './models/MenuModel'
 require './models/OrderModel'
-require './models/ UserModel'
+require './models/UserModel'
 
 map('/') {run ApplicationController}
 map('/home') {run HomeController}
-map('/menu') (run MenuController)
+map('/menu') {run MenuController}
 map('/check_out') {run OrderController}
