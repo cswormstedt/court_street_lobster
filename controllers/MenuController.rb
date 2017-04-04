@@ -16,6 +16,23 @@ class MenuController < ApplicationController
 		# end
 	end
 
+	post '/' do
 
+		@order = Order.new
+		@order.user_id = session[:user_id]
+		@order.save
+
+		
+		body = JSON.parse(request.body.read)
+		puts body["items"]
+
+		# @total = Total.new
+		# @total.order_id = @order.id
+		# @total.item_id  = params["item_id"]
+		# @total.amount = params["amount"]
+		# @total.save
+		# erb :check_out
+
+	end
 
 end

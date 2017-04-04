@@ -1,17 +1,19 @@
 <h1>Menu</h1>
-<div class="menu"
+<div class="menu">
 	<ul>
 		<% @items.each do |item|%>
 
 		<li><%= item.name %> - <%= item.info %> - <%= item.price %> 
-			<div class="counter">
-				<button>-</button>
-					<input type="text" name="amount" size="2" count="1">
-				<button>+</button>
-				<button>Add to cart</button>
-			</div>
+			
 		</li>
 		<%end%>
+		<div>
+
+				<button class="min" onclick="minus()">-</button>
+				<input type="text" name="amount" size="2" value="1" id="count">
+    			<button class="plus" onclick="plus()">+</button>
+
+			</div>
 	</ul>
 </div>
 
