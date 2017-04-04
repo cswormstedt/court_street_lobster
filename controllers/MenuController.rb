@@ -23,15 +23,25 @@ class MenuController < ApplicationController
 		@order.save
 
 		
+	
 		body = JSON.parse(request.body.read)
 		puts body["items"]
+		# binding.pry
 
-		# @total = Total.new
-		# @total.order_id = @order.id
-		# @total.item_id  = params["item_id"]
-		# @total.amount = params["amount"]
-		# @total.save
-		# erb :check_out
+		body["items"].each do |item|
+			@total = Total.new
+			@total.order_id = @order.id
+			@total.item_id = item["item_id"].to_i
+			@total.amount = item["amount"].to_i
+			@total.save
+			
+		end
+
+		# binding.pry
+		 @totalOrder = Total.where(order_id: @order.id)
+
+		# "success"
+		erb :check_out
 
 	end
 

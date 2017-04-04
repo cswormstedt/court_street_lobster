@@ -1,20 +1,21 @@
 <h1>Menu</h1>
-<div class="menu">
-	<ul>
-		<% @items.each do |item|%>
 
-		<li><%= item.name %> - <%= item.info %> - <%= item.price %> 
-			<div data-id="<%= item.id %>">
-				<button class="min" onclick="minus()">-</button>
-				<input type="text" name="amount" size="2" value="1" id="count">
-	    		<button class="plus" onclick="plus()">+</button>
-			</div>
-		</li>
-		<%end%>
-	
-	</ul>
-</div>
+	<div class="menu">
+		<ul>
+			<% @items.each do |item|%>
 
+			<li><%= item.name %> - <%= item.info %> - <%= item.price %> 
+				<div>
+					<button class="min">-</button>
+					<input type="hidden" name="id" value="<%=item.id %>">
+					<input type="text" name="amount" size="2" value="1" id="count">
+		    		<button class="plus">+</button>
+				</div>
+			</li>
+			<%end%>
+		
+		</ul>
+	</div>
 
 <div class="checkout">
 
