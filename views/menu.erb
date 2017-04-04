@@ -4,16 +4,14 @@
 		<% @items.each do |item|%>
 
 		<li><%= item.name %> - <%= item.info %> - <%= item.price %> 
-			
-		</li>
-		<%end%>
-		<div>
-
+			<div data-id="<%= item.id %>">
 				<button class="min" onclick="minus()">-</button>
 				<input type="text" name="amount" size="2" value="1" id="count">
-    			<button class="plus" onclick="plus()">+</button>
-
+	    		<button class="plus" onclick="plus()">+</button>
 			</div>
+		</li>
+		<%end%>
+	
 	</ul>
 </div>
 
