@@ -1,1 +1,10 @@
 <h1>Menu<h1>
+
+<ul>
+
+<% @menu.each do |menu|%>
+
+<li><%= menu.name %> - <%= menu.info %> - <%= menu.price %> </li>
+
+<%end%>
+</ul>
