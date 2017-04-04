@@ -5,9 +5,10 @@ require './controllers/HomeController'
 require './controllers/MenuController'
 require './controllers/OrderController'
 
-require './models/MenuModel'
+require './models/ItemModel'
 require './models/OrderModel'
 require './models/UserModel'
+require './models/TotalModel'
 
 map('/') {run ApplicationController}
 map('/home') {run HomeController}

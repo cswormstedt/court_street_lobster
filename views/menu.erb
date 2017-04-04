@@ -1,10 +1,26 @@
-<h1>Menu<h1>
+<h1>Menu</h1>
+<div class="menu"
+	<ul>
+		<% @items.each do |item|%>
 
-<ul>
+		<li><%= item.name %> - <%= item.info %> - <%= item.price %> 
+			<div class="counter">
+				<button>-</button>
+					<input type="text" name="amount" size="2" count="1">
+				<button>+</button>
+				<button>Add to cart</button>
+			</div>
+		</li>
+		<%end%>
+	</ul>
+</div>
 
-<% @menu.each do |menu|%>
 
-<li><%= menu.name %> - <%= menu.info %> - <%= menu.price %> </li>
+<div class="checkout">
 
-<%end%>
-</ul>
+
+	<a href="/check_out">Check Out</a>
+</div>
+
+<a href="/logout">logout ya dingus</a>
+

@@ -8,10 +8,10 @@ class HomeController < ApplicationController
 	post '/' do
 
 		username = params[:username]
-		password = params[:username]
+		password = params[:password]
 
 		user = User.find_by(username: username)
-		if user && user.authrnticate(password)
+		if user && user.authenticate(password)
 			session[:logged_in] = true
 			session[:username] = user
 			session[:user_id] = user.id
@@ -37,7 +37,7 @@ class HomeController < ApplicationController
 		user.phone      = params["phone"]
 		user.save
 
-		redirect '/home/login'
+		redirect '/home'
 	end
 
 	get '/logout' do
