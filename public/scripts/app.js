@@ -2,11 +2,8 @@ console.log("yo");
 var objectToSend = {items: []}
 
     var count = 1;
-    var countEl = document.getElementById("count");
-    // function plus(){
-    //     count++;
-    //     countEl.value = count;
-    // }
+    var countEl = $("#count");
+    
     // function minus(){
     //   if (count > 1) {
     //     count--;
@@ -17,14 +14,18 @@ var objectToSend = {items: []}
     $('.plus').on('click', function(e){
       
         var amount = $(this).prev()[0]
-
-        $(amount).val()++
+        var value = $('value')
+        console.log(amount);
+        console.log(value);
+        count++;
+        $(amount).val(count);
 
         var item_id = $(this).prev().prev()[0].value
-
-
     })
 
+
+
+// getEverything(makeAjax)
 function makeAjax(){
     console.log(objectToSend)
 }
@@ -34,6 +35,9 @@ function getEverything(callBack){
 
     for (var i=0; i < items.length; i++){
         var obj = {};
+        //looks for id
+        obj.item_id = $(items[i]).find('input[name="id"]').val()
+        //looks for amount
         obj.amount = $(items[i]).find('input[name="amount"]').val()
         objectToSend.items.push(obj)
     }
@@ -42,6 +46,6 @@ function getEverything(callBack){
 }
 
 
-function getObject(){
-    return objectToSend
-}
+// function getObject(){
+//     return objectToSend
+// }
