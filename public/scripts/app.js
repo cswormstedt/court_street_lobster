@@ -2,6 +2,9 @@ console.log("yo");
 var objectToSend = {items: []}
 
     var value   = $(".value")
+////////////
+//buttons///
+////////////
 
 //add item amount 
     $('.plus').on('click', function(e){
@@ -30,6 +33,16 @@ var objectToSend = {items: []}
         }
     })
 
+//add to cart button which sets everything into motion
+$('.cart').on('click', function(){
+    console.log('btn working')
+    getEverything(makeAjax)
+
+})
+//////////
+///ajax///
+//////////
+
 // getEverything(makeAjax)
 function makeAjax(){
     
@@ -49,7 +62,7 @@ function makeAjax(){
     })
 
 }
-
+//sets the object and callsback to makeAjax
 function getEverything(callBack){
     var items = $('ul').children()
 
@@ -65,10 +78,3 @@ function getEverything(callBack){
     return callBack()
 }
 
-
-$('.cart').on('click', function(){
-console.log('btn working')
-
-    getEverything(makeAjax)
-
-})

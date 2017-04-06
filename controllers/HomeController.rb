@@ -40,10 +40,5 @@ class HomeController < ApplicationController
 		redirect '/home'
 	end
 
-	get '/logout' do
-		session.destroy
-
-		redirect '/home'
-	end
 
 end

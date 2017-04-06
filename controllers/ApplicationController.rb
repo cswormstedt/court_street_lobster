@@ -20,5 +20,11 @@ class ApplicationController < Sinatra::Base
 		erb :not_found
 	end	
 
+	get '/logout' do
+		session.destroy
+
+		redirect '/home'
+	end
+
 
 end

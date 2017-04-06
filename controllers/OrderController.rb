@@ -2,27 +2,18 @@ class OrderController < ApplicationController
 
 	get '/' do
 
-		# @order = Order.new
-		# @order.user_id = session[:user_id]
-		# @order.save
-
-		
+		# if session[:logged_in]
+		# 	@username = session[:username]
 	
-		# body = JSON.parse(request.body.read)
-		# puts body["items"]
-		# # binding.pry
-
-		# body["items"].each do |item|
-		# 	@total = Total.new
-		# 	@total.order_id = @order.id
-		# 	@total.item_id = item["item_id"].to_i
-		# 	@total.amount = item["amount"].to_i
-		# 	@total.save
+			@order_id = session[:order_id]
 			
+			@total_check_out = Total.where(order_id: @order_id)
+
+			erb :check_out
+		# else
+		# 	@message = "You are not logged in"
+		# 	erb :home
 		# end
-
-		@totalOrder = Total.where(order_id: @order.id)
-
-		erb :check_out
+			
 	end
 end

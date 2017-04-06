@@ -1,7 +1,7 @@
 <h1>Checkout</h1>
 
 <ul>
-	<% @totalOrder.each do |order| %>
-		<%= order.item.name %> - <%= order.amount %> <br>
+	<% @total_check_out.each do |order| %>
+	 	<%= order.item.name %> - <%= order.amount %> <br>
 	<% end %>
 </ul>

@@ -9,7 +9,6 @@ class MenuController < ApplicationController
 
 		erb :menu
 
-
 		# else
 		# 	@message = "You are not logged in"
 		# 	erb :home
@@ -19,18 +18,17 @@ class MenuController < ApplicationController
 	post '/' do
 
 		p'--------------'
-		puts params
-
+		puts params 
 
 		@order = Order.new
 		@order.user_id = session[:user_id]
 		@order.save
 
-		
-	
+		session[:order_id] = @order.id
+
 		body = JSON.parse(request.body.read)
 		puts body["items"]
-		# binding.pry
+
 
 		body["items"].each do |item|
 			@total = Total.new
@@ -41,10 +39,7 @@ class MenuController < ApplicationController
 			
 		end
 
-		# binding.pry
 		 @totalOrder = Total.where(order_id: @order.id)
-
-		# "success"
 		'success'
 
 	end
