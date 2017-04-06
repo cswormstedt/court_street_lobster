@@ -4,6 +4,7 @@ require './controllers/ApplicationController'
 require './controllers/HomeController'
 require './controllers/MenuController'
 require './controllers/OrderController'
+require './controllers/OwnerController'
 
 require './models/ItemModel'
 require './models/OrderModel'
