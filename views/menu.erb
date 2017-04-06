@@ -6,15 +6,16 @@
 
 			<li><%= item.name %> - <%= item.info %> - <%= item.price %> 
 				<div>
-					<button class="min">-</button>
-					<input type="hidden" name="id" value="<%=item.id %>">
-					<input type="text" name="amount" size="2" value="1" id="count">
-		    		<button class="plus">+</button>
+					<button class="min" data-id="<%= item.id %>">-</button>
+					<input type="hidden" name="id" value="<%= item.id %>">
+					<input type="text" name="amount" size="2" value="1" class="count" data-id="<%= item.id %>">
+		    		<button class="plus" data-id="<%= item.id %>">+</button>
 				</div>
 			</li>
 			<%end%>
 		
 		</ul>
+		<button class="cart"> Add to Cart </button>
 	</div>
 
 <div class="checkout">

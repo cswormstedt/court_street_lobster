@@ -18,6 +18,10 @@ class MenuController < ApplicationController
 
 	post '/' do
 
+		p'--------------'
+		puts params
+
+
 		@order = Order.new
 		@order.user_id = session[:user_id]
 		@order.save
@@ -41,8 +45,10 @@ class MenuController < ApplicationController
 		 @totalOrder = Total.where(order_id: @order.id)
 
 		# "success"
-		erb :check_out
+		'success'
 
 	end
+
+	
 
 end

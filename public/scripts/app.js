@@ -1,33 +1,53 @@
 console.log("yo");
 var objectToSend = {items: []}
 
-    var count = 1;
-    var countEl = $("#count");
-    
-    // function minus(){
-    //   if (count > 1) {
-    //     count--;
-    //     countEl.value = count;
-    //   }  
-    // }
+    var value   = $(".value")
 
+//add item amount 
     $('.plus').on('click', function(e){
-      
-        var amount = $(this).prev()[0]
-        var value = $('value')
-        console.log(amount);
-        console.log(value);
-        count++;
-        $(amount).val(count);
-
         var item_id = $(this).prev().prev()[0].value
+        var amount = $(this).prev().val()
+        console.log(this)
+        amount++
+        $(this).prev().attr("value", amount)
+
+        console.log($(this).prev().val())
+    
     })
 
-
+//min item amount
+    $('.min').on('click', function(e){
+        var item_id = $(this).parent()[0].value
+        console.log(this)
+        var amount = $(this).next().next().val()
+        var button = $(e.target);
+        var id = button.data('id')
+        console.log('click' + id)
+        if (amount > 0){
+        amount--;
+        $(this).next().next().attr("value", amount)
+        console.log($(this).next())
+        }
+    })
 
 // getEverything(makeAjax)
 function makeAjax(){
-    console.log(objectToSend)
+    
+      $.ajax({
+        url: '/menu',
+        type: 'POST',
+        data: JSON.stringify(objectToSend),
+        contentType: 'application/json',
+        success: function(res){
+            console.log(objectToSend);
+
+
+        },
+        error: function(err){
+            console.log(err);
+        }
+    })
+
 }
 
 function getEverything(callBack){
@@ -46,6 +66,9 @@ function getEverything(callBack){
 }
 
 
-// function getObject(){
-//     return objectToSend
-// }
+$('.cart').on('click', function(){
+console.log('btn working')
+
+    getEverything(makeAjax)
+
+})

@@ -15,4 +15,12 @@ INSERT INTO items (name, info, price) VALUES ('Lobster Roll-Maine Style', 'Fresh
 
 INSERT INTO items (name, info, price) VALUES ('Lobster Roll-Connecticut Style', 'Fresh Maine Lobster, Served traditionally with drawn butter topping', 19.0);
 
- 
+
+
+INSERT INTO items (name, info, price) VALUES ('Crab Roll', 'Blue Crab, Sriracha Mayo, Old Bay', 14.0);
+
+INSERT INTO items (name, info, price) VALUES ('Shrimp Roll', 'Chemical Free Gulf Shrimp, Orange Zest Mayo', 12.0);
+
+INSERT INTO items (name, info, price) VALUES ('Chicken Salad Roll', 'Free-Range Pennsylvania Chicken, Celery Mayo, Tarragon, topped with back chicken skins', 9.0);
+
+INSERT INTO items (name, info, price) VALUES ('Veggie Roll', 'Chickpeas, Peppers, Housemade pickles, Housemade Coleslaw, and housemade pesto', 8.0);
