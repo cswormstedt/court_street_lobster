@@ -1,17 +1,43 @@
 <body class="lobsta">
-	<header>
-		<h1>register</h1>
-	</header>
-		<div class="form">
-			<form class="registerForm" action="/home/register" method="POST">
-				<input type="text" name="username" placeholder="Username"/><br>
-				<input type="password" name="password" placeholder="Password"/><br>
-				<input type="email" name="email" placeholder="Email"/><br>
-				<input type="text" name="first_name" placeholder="First Name"/><br>
-				<input type="text" name="last_name" placeholder="Last Name"/><br>
-				<input type="text" name="phone" placeholder="Phone"/><br>
-				<button type="submit"> Sign up </button>
-				<a href="/home">Home</a>
-			</form>
-		</div>
+
+	<div class="container">
+
+		<h1>
+			<a href="/home">
+				<img src="http://i.imgur.com/xV0fiFg.png" alt="Court Street Lobster">
+			</a>
+		</h1>
+	
+		<h1 class="text-center">Register</h1>
+		<form class="registration-form" action="/home/register" method="POST">
+			<label class="col-one-half">
+				<span class="label-text">First Name</span>
+				<input type="text" name="first_name">
+			</label>
+			<label class="col-one-half">
+				<span class="label-text">Last Name</span>
+				<input type="text" name="last_name">
+			</label>
+			<label>
+				<span class="label-text">Username</span>
+				<input type="text" name="username">
+			</label>
+			<label>
+				<span class="label-text">Email</span>
+				<input type="email" name="email">
+			</label>
+			<label>
+				<span class="label-text">Phone</span>
+				<input type="text" name="phone"/>
+			</label>
+			<label class="password">
+				<span class="label-text">Password</span>
+				<input type="password" name="password">
+			</label>
+			<div class="text-center">
+				<button class="submit">Sign Up</button>
+			</div>
+		</form>
+	</div>
+		
 </body>

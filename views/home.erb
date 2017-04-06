@@ -1,18 +1,33 @@
 <body class="lobsta">
-	<header>
-		<h1>home</h1>
-	</header>
-		<section>
-			<div class="form">
-				<%= @message %>
-				<form class="homeForm" action="/home" method="POST">
-					<input type="text" name="username" placeholder="Username"/><br>
-					<input type="password" name="password" placeholder="Password"/><br>
-					<button type="submit"> log in </button>
 
-					<a href="/home/register">Register</a>
-					<a href="/menu">Menu</a>
-				</form>
-			</div>
+		<a href="/home/register">Register</a>
+		<a href="/menu">Menu</a>
+	
+		<section>
+			
+				
+				  <div class="container">
+				
+						<h1>
+							<a href="/home">
+								<img src="http://i.imgur.com/xV0fiFg.png" alt="Court Street Lobster">
+							</a>
+						</h1>
+					<div class="message"><%= @message %></div>
+					<h1 class="text-center">Welcome</h1>
+					<form class="registration-form" action="/home" method="POST">
+						<label>
+							<span class="label-text">Username</span>
+							<input type="text" name="username">
+						</label>
+						<label class="password">
+							<span class="label-text">Password</span>
+							<input type="password" name="password">
+						</label>
+						<div class="text-center">
+							<button class="submit" name="register">Log In</button>
+						</div>
+					</form>
+				</div>
 		</section>
-</body>
+</body>	
