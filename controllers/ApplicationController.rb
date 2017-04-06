@@ -3,6 +3,11 @@ class ApplicationController < Sinatra::Base
 	require 'bundler'
 	Bundler.require
 
+	# require 'twilio-ruby'
+
+	# account_sid = 'AC2200e4e159852a7b5f227158058113c0'
+	# auth_token = 'AUTH'
+
 	enable :sessions
 
 	ActiveRecord::Base.establish_connection(

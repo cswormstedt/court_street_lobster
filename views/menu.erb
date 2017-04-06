@@ -1,5 +1,13 @@
+<body class="speckle">
+<header>
 <h1>Menu</h1>
+<div class="checkout">
+	<a href="/check_out">Check Out</a>
+</div>
 
+<a href="/logout">logout ya dingus</a>
+</header>
+<section>
 	<div class="menu">
 		<ul>
 			<% @items.each do |item|%>
@@ -17,10 +25,7 @@
 		</ul>
 		<button class="cart"> Add to Cart </button>
 	</div>
+</section>
 
-<div class="checkout">
-	<a href="/check_out">Check Out</a>
-</div>
-
-<a href="/logout">logout ya dingus</a>
+</body>
 

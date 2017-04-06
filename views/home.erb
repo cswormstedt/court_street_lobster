@@ -1,10 +1,18 @@
-<h1>home</h1>
-<%= @message %>
-<form action="/home" method="POST">
-	<input type="text" name="username" placeholder="Username"/><br>
-	<input type="password" name="password" placeholder="Password"/><br>
-	<button type="submit"> log in </button>
+<body class="lobsta">
+	<header>
+		<h1>home</h1>
+	</header>
+		<section>
+			<div class="form">
+				<%= @message %>
+				<form class="homeForm" action="/home" method="POST">
+					<input type="text" name="username" placeholder="Username"/><br>
+					<input type="password" name="password" placeholder="Password"/><br>
+					<button type="submit"> log in </button>
 
-	<a href="/home/register">Register</a>
-	<a href="/menu">Menu</a>
-</form>
+					<a href="/home/register">Register</a>
+					<a href="/menu">Menu</a>
+				</form>
+			</div>
+		</section>
+</body>

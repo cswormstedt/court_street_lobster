@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cswormstedt/court_street_lobster#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.0",
     "gulp-watch": "^4.3.11"

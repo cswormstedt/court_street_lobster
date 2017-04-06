@@ -1,7 +1,86 @@
 @maincolor: #001155;
+@secondMainColor: #54565b;
+@lightLight: #b2b2b2;
+@tannish: #d7d2cb;
+@warning: #e53e30;
+@highlight: #9ed5cb;
 
-body {
+
+// @gravel: './public/img/background/gravel-08.png';
+// @lobster: './public/img/background/lobster-blue.jpg';
+// @speckle: './public/img/background/speckle-paper.jpg';
+
+.speckle {
 	color: @maincolor;
-	background-color: #b2b2b2;
+	background-image: url('http://i.imgur.com/1vqkZcZ.jpg');
+	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center center;
+}
 
+.lobsta {
+	color: @maincolor;
+	background-image: url('http://i.imgur.com/QKD3qNr.jpg');
+	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center center;
+}
+
+.form {
+    display: block;
+    text-align: center;
+}
+
+.homeForm
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 23%;
+}
+
+.git{ 
+    text-decoration: none;
+    color: @maincolor;
+    font-size: 14px;
+    font-weight: normal
+}
+
+a {
+    color: @lightLight;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: @highlight;
+}
+
+header {
+
+    background: #fff;
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 4px solid @secondMainColor;
+    z-index: 100;
+}
+
+
+footer {
+    color: snow;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(50, 50, 50, 0.6);
+    text-align: center;
+    margin-bottom: -10px;
 }
