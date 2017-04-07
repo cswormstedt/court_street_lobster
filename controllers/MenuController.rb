@@ -2,23 +2,24 @@ class MenuController < ApplicationController
 
 	get '/' do
 		
-		# if session[:logged_in]
-		# 	@username = session[:username]
+		if session[:logged_in]
+			@username = session[:username]
 			@items = Item.all
-		# binding.pry
+		
 
 		erb :menu
 
-		# else
-		# 	@message = "You are not logged in"
-		# 	erb :home
-		# end
+		else
+			@message = "You are not logged in"
+			erb :home
+		end
 	end
 
 	post '/' do
 
 		p'--------------'
 		puts params 
+
 
 		@order = Order.new
 		@order.user_id = session[:user_id]
@@ -37,9 +38,10 @@ class MenuController < ApplicationController
 			@total.item_id = item["item_id"].to_i
 			@total.amount = item["amount"].to_i
 			@total.save
+
 			
 		end
-
+			session[:amoun] = @total.amount
 		 @totalOrder = Total.where(order_id: @order.id)
 		'success'
 

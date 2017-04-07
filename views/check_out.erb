@@ -7,8 +7,11 @@
 			<ul>
 				<% @total_check_out.each do |order| %>
 			 		<%= order.item.name %> - <%= order.amount %> <br>
-			 		
+
 				<% end %>
+
+				<h3>Total</h3>
+				<p>$<%= @bill %></p>
 				<a class="submit" href="/logout" >go get ya food ya dingus</a>
 			</ul>
 		</div>
