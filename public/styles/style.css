@@ -1,10 +1,10 @@
 @font-face {
   font-family: Barley;
-  src: url('/public/img/fonts/Barley-Regular.otf');
+  src: url('/img/fonts/Barley-Regular.otf');
 }
 @font-face {
   font-family: lato;
-  src: url('/public/img/fonts/Lato-Light.ttf');
+  src: url('/img/fonts/Lato-Light.ttf');
 }
 .notfound {
   color: #001155;
