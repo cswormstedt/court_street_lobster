@@ -14,7 +14,6 @@ class OrderController < ApplicationController
 			# @total_check_out.each do |total|
 			# @bill = (total.item.price + total.item.price)
 
-			end
 			erb :check_out
 		else
 			@message = "You are not logged in"
