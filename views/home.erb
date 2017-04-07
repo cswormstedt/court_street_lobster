@@ -1,18 +1,26 @@
 <body class="lobsta">
-
-		<a href="/home/register">Register</a>
-		<a href="/menu">Menu</a>
+		
 	
 		<section>
 				  <div class="container">
-				
+						<nav>
+							<a class="hola" href="/home/register">Sign Up</a>
+							<a class="hola" href="/menu" style="float:right">Menu</a>
+						</nav>
 						<h1>
 							<a href="/home">
-								<img src="http://i.imgur.com/xV0fiFg.png" alt="Court Street Lobster">
+								<img src="http://i.imgur.com/xV0fiFg.png" alt="Court Street Lobster"/>
 							</a>
 						</h1>
-					<div class="message"><%= @message %></div>
-					<h1 class="text-center">Welcome</h1>
+					
+					<div class="text-center">
+						<img class="homeIcon" src="http://i.imgur.com/A2EUakM.png"/>
+						<img class="homeIcon" src="http://i.imgur.com/FgoGl4U.png"/>
+						<img class="homeIcon" src="http://i.imgur.com/TiPAWIH.png"/>
+					</div>
+						<div class="text-center message">
+							<%= @message %>
+						</div>
 					<form class="registration-form" action="/home" method="POST">
 						<label>
 							<span class="label-text">Username</span>
@@ -25,6 +33,7 @@
 						<div class="text-center">
 							<button class="submit" name="register">Log In</button>
 						</div>
+						
 					</form>
 				</div>
 		</section>

@@ -17,7 +17,7 @@ class HomeController < ApplicationController
 			session[:user_id] = user.id
 			redirect '/menu'
 		else
-			@message = 'username or password were incorrect'
+			@message = 'username or password was incorrect'
 			erb :home
 		end
 	end

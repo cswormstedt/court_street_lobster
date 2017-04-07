@@ -1,31 +1,34 @@
 <body class="speckle">
-<header>
-<h1>Menu</h1>
+	<header>
+		<h1>Lobsta Menu</h1>
+	</header>
+	
+	<section>
+		<div class="container">
+			<nav>
+				<a href="/check_out">Check Out</a>
+				<a href="/logout" style="float:right">logout ya dingus</a>
+			</nav>
+			<br>
+			<ul>
+				<% @items.each do |item|%>
 
-</header>
-<section>
-	<div class="menu">
-		<ul>
-			<% @items.each do |item|%>
+				<li><%= item.name %> - <%= item.info %> - <%= item.price %> 
+					<div>
+						<button class="min" data-id="<%= item.id %>">-</button>
+						<input type="hidden" name="id" value="<%= item.id %>">
+						<input type="text" name="amount" size="2" value="0" class="count" data-id="<%= item.id %>">
+			    		<button class="plus" data-id="<%= item.id %>">+</button>
+					</div>
+				</li>
 
-			<li><%= item.name %> - <%= item.info %> - <%= item.price %> 
-				<div>
-					<button class="min" data-id="<%= item.id %>">-</button>
-					<input type="hidden" name="id" value="<%= item.id %>">
-					<input type="text" name="amount" size="2" value="0" class="count" data-id="<%= item.id %>">
-		    		<button class="plus" data-id="<%= item.id %>">+</button>
-				</div>
-			</li>
-			<%end%>
-		
-		</ul>
-		<button class="cart"> Add to Cart </button>
-	</div>
-</section>
-<div class="checkout">
-	<a href="/check_out">Check Out</a>
-</div>
+				<%end%>
 
-<a href="/logout">logout ya dingus</a>
+			</ul>
+			<div class="text-center">
+				<button class="cart"> Add to Cart </button>
+			</div>
+		</div>
+	</section>
 </body>
 

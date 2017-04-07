@@ -78,5 +78,8 @@ function getEverything(callBack){
     return callBack()
 }
 
+$('#signUp').on('click', function(e){
+    $('location').attr('href', '/home/register');
+})
 
 

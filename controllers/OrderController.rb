@@ -4,11 +4,15 @@ class OrderController < ApplicationController
 
 		# if session[:logged_in]
 		# 	@username = session[:username]
-	
-			@order_id = session[:order_id]
 			
+			@order_id = session[:order_id]
+
 			@total_check_out = Total.where(order_id: @order_id)
 
+			@total_check_out do |amount|
+				@total
+
+			end
 			erb :check_out
 		# else
 		# 	@message = "You are not logged in"

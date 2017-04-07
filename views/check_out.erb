@@ -1,11 +1,15 @@
 <body class="speckle">
 	<header>
 		<h1>Checkout</h1>
-		<a class="logout" href="/logout"></a>
 	</header>
-		<ul>
-			<% @total_check_out.each do |order| %>
-			 	<%= order.item.name %> - <%= order.amount %> <br>
-			<% end %>
-		</ul>
+		<div class="container">
+			
+			<ul>
+				<% @total_check_out.each do |order| %>
+			 		<%= order.item.name %> - <%= order.amount %> <br>
+			 		
+				<% end %>
+				<a class="submit" href="/logout" >go get ya food ya dingus</a>
+			</ul>
+		</div>
 </body>

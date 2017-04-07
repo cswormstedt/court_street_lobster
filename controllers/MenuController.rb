@@ -25,11 +25,12 @@ class MenuController < ApplicationController
 		@order.save
 
 		session[:order_id] = @order.id
+		
 
 		body = JSON.parse(request.body.read)
 		puts body["items"]
 
-
+	
 		body["items"].each do |item|
 			@total = Total.new
 			@total.order_id = @order.id

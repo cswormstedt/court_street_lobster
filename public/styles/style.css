@@ -1,3 +1,14 @@
+@font-face {
+  font-family: Barley;
+  src: url(/public/img/fonts/Barley-Regular.otf);
+}
+@font-face {
+  font-family: lato;
+  src: url(/public/img/fonts/Lato-Light.ttf);
+}
+.notfound {
+  color: #001155;
+}
 .speckle {
   color: #001155;
   background-image: url('http://i.imgur.com/1vqkZcZ.jpg');
@@ -14,23 +25,69 @@
   background-attachment: fixed;
   background-position: center center;
 }
+footer {
+  color: #b2b2b2;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(50, 50, 50, 0.6);
+  text-align: center;
+  margin-bottom: -10px;
+}
 .git {
   text-decoration: none;
-  color: #001155;
+  color: #fff;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
+}
+.logout {
+  text-align: center;
+}
+.hola {
+  font-family: Barley;
+  font-size: 25px;
+}
+.hola:hover {
+  color: #54565b;
 }
 a {
-  color: #b2b2b2;
+  font-family: lato;
+  color: #001155;
   text-decoration: none;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 25px;
 }
 a:hover {
   color: #9ed5cb;
 }
 .message {
   color: #e53e30;
+}
+li {
+  font-family: lato;
+}
+.homeIcon {
+  width: 75px;
+  height: auto;
+}
+button.cart {
+  background: #001155;
+  color: #b2b2b2;
+  font-family: lato;
+  border: 1px solid #333;
+  line-height: 1em;
+  padding: 0.5em 0.5em;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+button.cart:hover,
+button.cart:focus,
+button.cart:active,
+button.cart.loading {
+  background: #9ed5cb;
+  color: #fff;
+  outline: none;
 }
 .container {
   border-radius: 0.5em;
@@ -87,7 +144,7 @@ form button:hover,
 form button:focus,
 form button:active,
 form button.loading {
-  background: #333;
+  background: #001155;
   color: #fff;
   outline: none;
 }
@@ -134,6 +191,7 @@ form label.password {
   position: relative;
 }
 h1 {
+  font-family: Barley;
   font-size: 30px;
   margin-top: 0px;
   text-align: center;
@@ -146,15 +204,4 @@ h1 img {
 }
 .text-center {
   text-align: center;
-}
-footer {
-  color: snow;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 1rem;
-  background: rgba(50, 50, 50, 0.6);
-  text-align: center;
-  margin-bottom: -10px;
 }
