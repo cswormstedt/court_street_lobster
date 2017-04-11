@@ -27,26 +27,25 @@ class MenuController < ApplicationController
 
 		session[:order_id] = @order.id
 		
-
 		body = JSON.parse(request.body.read)
 		puts body["items"]
+		
 
-	
 		body["items"].each do |item|
-			@total = Total.new
-			@total.order_id = @order.id
-			@total.item_id = item["item_id"].to_i
-			@total.amount = item["amount"].to_i
-			@total.save
+			# binding.pry
+			if item["amount"].to_i > 0
+				@total = Total.new
+				@total.order_id = @order.id
+				@total.item_id = item["item_id"].to_i
+				@total.amount = item["amount"].to_i
+				@total.save
+			end
 
-			
 		end
-			session[:amoun] = @total.amount
+
 		 @totalOrder = Total.where(order_id: @order.id)
 		'success'
 
-	end
-
-	
+	end	
 
 end
